@@ -38,8 +38,7 @@ var app = {
 
         var markerOne = new google.maps.Marker({
             position: latitudeAndLongitudeOne,
-            map: map,
-            zIndex:99999999
+            map: map
         });
 
         //        var latitudeAndLongitudeTwo = new google.maps.LatLng('42.354', '-71.069');
@@ -47,8 +46,7 @@ var app = {
 
         var markerTwo = new google.maps.Marker({
             position: latitudeAndLongitudeTwo,
-            map: map,
-            zIndex:99999999
+            map: map
         });
 
         var i = 0;
@@ -70,9 +68,11 @@ var app = {
 
             var newcoordinate = new google.maps.LatLng(lat1, lng1);
             markerOne.setPosition(newcoordinate);
+            markerOne.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
 
             newcoordinate = new google.maps.LatLng(lat2, lng2);
             markerTwo.setPosition(newcoordinate);
+            markerTwo.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
         }, 500);
     },
     /* Note: This example requires that you consent to location sharing when
