@@ -121,7 +121,7 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-            initOverlay();
+//            initOverlay();
             app.addMarkersToMap(map, pos);
         }
     }
