@@ -127,7 +127,14 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-//            app.addMarkersToMap(map, pos);
+
+            var latLng = map.getCenter();
+            var pos = {
+               lat: latLng.lat(),
+               lng: latLng.lng()
+            };
+
+            app.addMarkersToMap(map, pos);
         }
     }
 };

@@ -34,6 +34,7 @@ function USGSOverlay(bounds, image, map) {
 
   // Explicitly call setMap on this overlay.
   this.setMap(map);
+
 }
 // [END region_constructor]
 
@@ -85,16 +86,6 @@ USGSOverlay.prototype.draw = function() {
   div.style.top = ne.y + 'px';
   div.style.width = (ne.x - sw.x) + 'px';
   div.style.height = (sw.y - ne.y) + 'px';
-
-  var latLng = map.getCenter();
-                    pos = {
-                        lat: latLng.lat(),
-                        lng: latLng.lng()
-                    };
-
-  app.addMarkersToMap(map, pos);
-
-
 
 };
 // [END region_drawing]
