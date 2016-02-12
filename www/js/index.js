@@ -67,11 +67,9 @@ var app = {
 
             var newcoordinate = new google.maps.LatLng(lat1, lng1);
             markerOne.setPosition(newcoordinate);
-            markerOne.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
 
             newcoordinate = new google.maps.LatLng(lat2, lng2);
             markerTwo.setPosition(newcoordinate);
-            markerTwo.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
 
         }, 500);
     },
@@ -123,8 +121,8 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-            app.addMarkersToMap(map, pos);
             initOverlay();
+            app.addMarkersToMap(map, pos);
         }
     }
 };

@@ -85,6 +85,11 @@ USGSOverlay.prototype.draw = function() {
   div.style.top = ne.y + 'px';
   div.style.width = (ne.x - sw.x) + 'px';
   div.style.height = (sw.y - ne.y) + 'px';
+
+  var markers = $('#map').gmap('get','markers');
+  for (var marker in markers){
+     marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+  }
 };
 // [END region_drawing]
 
