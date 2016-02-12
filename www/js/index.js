@@ -1,7 +1,11 @@
 /* normally would call app.initialize() here, but now triggering it from maps api callback */
 function init() {
     app.initialize();
+    initOverlay();
 }
+
+// global var
+var map;
 
 var app = {
     // Application Constructor
@@ -74,7 +78,7 @@ var app = {
        failed.", it means you probably did not give permission for the browser to
        locate you. */
     initMap: function() {
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             center: {
                 lat: 42.358,
                 lng: -71.058
@@ -85,14 +89,18 @@ var app = {
             map: map
         });
 
+        map.panTo(new google.maps.LatLng('42.359541', '-71.035882'));
+
         try {
             var pos;
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
+/*                        lat: position.coords.latitude,
+                        lng: position.coords.longitude */
+                        lat: 42.359541,
+                        lng: -71.035882
                     };
 
                     infoWindow.setPosition(pos);
@@ -124,3 +132,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
 }
+
