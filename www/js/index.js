@@ -1,7 +1,6 @@
 /* normally would call app.initialize() here, but now triggering it from maps api callback */
 function init() {
     app.initialize();
-    initOverlay();
 }
 
 // global var
@@ -121,6 +120,7 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
+            initOverlay();
             app.addMarkersToMap(map, pos);
         }
     }
