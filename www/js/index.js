@@ -123,8 +123,8 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-            initOverlay();
             app.addMarkersToMap(map, pos);
+            initOverlay();
         }
     }
 };
