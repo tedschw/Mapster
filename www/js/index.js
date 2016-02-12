@@ -1,6 +1,7 @@
 /* normally would call app.initialize() here, but now triggering it from maps api callback */
 function init() {
     app.initialize();
+    initOverlay();
 }
 
 // global var
@@ -70,7 +71,6 @@ var app = {
 
             newcoordinate = new google.maps.LatLng(lat2, lng2);
             markerTwo.setPosition(newcoordinate);
-
         }, 500);
     },
     /* Note: This example requires that you consent to location sharing when
@@ -121,7 +121,6 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-//            initOverlay();
             app.addMarkersToMap(map, pos);
         }
     }
