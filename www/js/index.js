@@ -38,7 +38,9 @@ var app = {
 
         var markerOne = new google.maps.Marker({
             position: latitudeAndLongitudeOne,
-            map: map
+            map: map,
+            optimized: false,
+            zIndex: google.maps.Marker.MAX_ZINDEX + 1
         });
 
         //        var latitudeAndLongitudeTwo = new google.maps.LatLng('42.354', '-71.069');
@@ -46,7 +48,9 @@ var app = {
 
         var markerTwo = new google.maps.Marker({
             position: latitudeAndLongitudeTwo,
-            map: map
+            map: map,
+            optimized: false,
+            zIndex: google.maps.Marker.MAX_ZINDEX + 1
         });
 
         var i = 0;
