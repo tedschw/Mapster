@@ -119,8 +119,7 @@ var app = {
             console.log(err.message);
         }
 
-        //google.maps.event.addListenerOnce(map, 'tilesloaded', onMapReady);
-        google.maps.event.addDomListener(map, 'tilesloaded', onMapReady);
+        google.maps.event.addListenerOnce(map, 'tilesloaded', onMapReady);
 
         function onMapReady() {
             console.log("map loaded");

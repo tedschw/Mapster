@@ -61,7 +61,7 @@ USGSOverlay.prototype.onAdd = function() {
 
   // Add the element to the "overlayLayer" pane.
   var panes = this.getPanes();
-  panes.overlayLayer.appendChild(div);
+  panes.mapPane.appendChild(div);
 };
 // [END region_attachment]
 
