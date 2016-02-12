@@ -120,7 +120,7 @@ var app = {
         }
 
         //google.maps.event.addListenerOnce(map, 'tilesloaded', onMapReady);
-        google.maps.event.addDomListener(window, 'load', onMapReady);
+        google.maps.event.addDomListener(map, 'tilesloaded', onMapReady);
 
         function onMapReady() {
             console.log("map loaded");
