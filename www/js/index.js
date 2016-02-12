@@ -38,20 +38,20 @@ var app = {
 
         var markerOne = new google.maps.Marker({
             position: latitudeAndLongitudeOne,
-            map: map,
-            optimized: false,
-            zIndex: google.maps.Marker.MAX_ZINDEX + 1
+            map: map
         });
+
+        markerOne.setZIndex(9999);
+
 
         //        var latitudeAndLongitudeTwo = new google.maps.LatLng('42.354', '-71.069');
         var latitudeAndLongitudeTwo = new google.maps.LatLng(pos.lat - 0.005, pos.lng - 0.005);
 
         var markerTwo = new google.maps.Marker({
             position: latitudeAndLongitudeTwo,
-            map: map,
-            optimized: false,
-            zIndex: google.maps.Marker.MAX_ZINDEX + 1
+            map: map
         });
+        markerTwo.setZIndex(9999);
 
         var i = 0;
         var v = 1;
