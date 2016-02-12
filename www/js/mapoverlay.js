@@ -8,9 +8,7 @@ function initOverlay() {
       new google.maps.LatLng(42.4, -71.0166));
 
   // The photograph is courtesy of the U.S. Geological Survey.
-//  var srcImage = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/talkeetna.png';
-//   var srcImage = 'http://localhost:3000/img/13272_d.png';
-   var srcImage = 'http://apterratech.com/13272_d.png';
+  var srcImage = '../img/13272_d.png';
 
   // The custom USGSOverlay object contains the USGS image,
   // the bounds of the image, and a reference to the map.
