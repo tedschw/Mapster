@@ -67,9 +67,12 @@ var app = {
 
             var newcoordinate = new google.maps.LatLng(lat1, lng1);
             markerOne.setPosition(newcoordinate);
+            markerOne.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
 
             newcoordinate = new google.maps.LatLng(lat2, lng2);
             markerTwo.setPosition(newcoordinate);
+            markerTwo.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+
         }, 500);
     },
     /* Note: This example requires that you consent to location sharing when
