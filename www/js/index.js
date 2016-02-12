@@ -127,7 +127,7 @@ var app = {
 
         function onMapReady() {
             console.log("map loaded");
-            app.addMarkersToMap(map, pos);
+//            app.addMarkersToMap(map, pos);
         }
     }
 };
